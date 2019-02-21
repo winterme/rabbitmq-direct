@@ -1,0 +1,26 @@
+server:
+  port: 9999
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: zhangzq
+    password: ******
+
+mq:
+  config:
+    # 交换器名称
+    exchange: log.direct
+    # 队列名称
+    queue:
+      # info 队列名称
+      #info: log.info
+      # info 队列路由键名称
+      info.routing.key: log.info.routing.key
+      # error 队列名称
+      #error: log.error
+      # error 队列路由键名称
+      error.routing.key: log.error.routing.key
+
+
+

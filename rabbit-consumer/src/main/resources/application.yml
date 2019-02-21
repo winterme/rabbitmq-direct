@@ -1,0 +1,25 @@
+server:
+  port: 1209
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: zhangzq
+    password: *******
+
+# 1.交换机名称
+#  2.队列名称
+#    路由键
+# 设置交换机的名称
+mq:
+  config:
+    exchange: log.direct
+    queue:
+      # info 队列名称
+      info: log.info
+      # info 队列的路由键
+      info.routing.key: log.info.routing.key
+      # error 队列名称
+      error: log.error
+      # error 队列的路由键
+      error.routing.key: log.error.routing.key
